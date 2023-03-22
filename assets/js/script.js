@@ -1,12 +1,45 @@
-const gen = {
-	"-3": ["Great Grandfather",	"Great Grandmother"],
-	"-2": ["Grandfather","Grandmother"],
-	"-1":["Father",	"Mother"],
-	"0": ["Me!", "Me!"],
-	"1":["Son",	"Daughter"],
-	"2"	:["Grandson","Granddaughter"],
-	"3" :["Great Grandson","Great Granddaughter"]
+function printRelation(level, gender)
+{
+    let relation;
+    if(gender == 'f' && level > 0)
+    {
+        relation = "daughter"
+    }
+    else if(gender == 'f' && level < 0)
+    {
+        relation = "mother"
+    }
+    else if(gender == 'm' && level > 0)
+    {
+        relation = "son"
+    }
+    else
+    {
+        relation = "father"
+    }
+
+    switch(level)
+    {
+        case -3:
+        case 3:
+            console.log("great grand" + relation);
+            break;
+        case -2:
+        case 2:
+            console.log("grand" + relation);
+            break;
+        case -1:
+        case 1:
+            console.log(relation)
+            break;
+        case 0:
+            console.log("me");
+            break;
+    }
+
 }
-function generation(x, y) {
-	return y=="m"?gen[x][0]:gen[x][1];
-}
+
+let level = 2
+let gender = 'f'
+
+printRelation(level, gender)
