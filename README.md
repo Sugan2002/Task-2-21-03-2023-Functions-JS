@@ -5,6 +5,7 @@
 The aim of the given code is to create a function that takes a number and a character representing the gender ("m" for male, "f" for female) and returns the name of an ancestor (m/f) or descendant (m/f) based on the input values.
 
 ## Algorithm:
+```
 1. Create a function named check that takes two parameters: num (the 
 number representing the generation) and gen (the character 
 representing the gender).
@@ -30,7 +31,7 @@ represents a male or female.
 • If num is 3, print "Great Grand Son".
 5. Close the switch statement and the if-else statement.
 6. Call the check function with the arguments 1 and 'f'.
-
+```
 ## Programm:
 ```
 function check(num,gen)
